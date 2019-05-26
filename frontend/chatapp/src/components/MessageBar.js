@@ -3,6 +3,7 @@ import Button from '@material-ui/core/Button'
 import Icon from '@material-ui/core/Icon';
 import TextField from '@material-ui/core/TextField';
 import axios from 'axios';
+import Paper from '@material-ui/core/Paper';
 import '../style/MessageBar.css';
 
 class MessageBar extends React.Component {
@@ -20,7 +21,7 @@ class MessageBar extends React.Component {
     message: this.state.message,
     })
     .then(function (response) {
-      
+
     })
     .catch(function (error) {
       console.log(error);
@@ -35,7 +36,7 @@ class MessageBar extends React.Component {
 
   render() {
     return (
-      <div className="bar-root">
+      <Paper elevation="6" className="bar-root">
         <form onSubmit={this.handleSubmit} className="bar-container" noValidate autoComplete="off">
           <TextField className="bar-textfield"
             value={this.state.message}
@@ -51,7 +52,7 @@ class MessageBar extends React.Component {
             <Icon className="bar-sendIcon">send</Icon>
           </Button>
         </form>
-      </div>
+      </Paper>
     );
   }
 }

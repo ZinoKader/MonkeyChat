@@ -1,5 +1,5 @@
 .list-root {
-  height: calc(100vh - 180px);
+  height: calc(100vh - 150px);
   top: 30px;
   overflow-y: hidden;
 }
@@ -13,5 +13,12 @@
 .list-messages::-webkit-scrollbar {
     display: none;
 }
+.list-timestamp {
+  font-size: 8px;
+  position: absolute;
+  right: 0;
+  top: 13px;
+}
 .list-listItem {
+  
 }

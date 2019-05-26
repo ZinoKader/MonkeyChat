@@ -23,7 +23,6 @@ class UserDialog extends React.Component {
   handleClose() {
     this.setState({dialogOpen: ''});
     this.props.setUsername(this.state.userName)
-    console.log(this.state.userName)
   }
 
   render() {

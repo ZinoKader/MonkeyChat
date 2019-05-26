@@ -25,6 +25,12 @@ class MessageList extends React.Component {
     try {
       const response = await axios.get(this.pollingUrl);
       if(this.state.oldmessages.length != response.data.length) {
+        //reformat timestamp to human-readable
+        response.data.forEach((item, i) => {
+          var date = new Date(item.timestamp);
+          var formattedDate = date.toLocaleDateString("sv-se") + " - " + date.toLocaleTimeString("sv-se")
+          response.data[i].timestamp = formattedDate
+        })
         this.setState({messages: response.data, oldmessages: response.data})
         this.scrollToBottom();
       }
@@ -45,6 +51,7 @@ class MessageList extends React.Component {
             return (
               <ListItem text>
                 <ListItemText className="list-listItem" primary={entry.sender} secondary={entry.message} />
+                <p className="list-timestamp">{entry.timestamp}</p>
               </ListItem>
             )
           })}
