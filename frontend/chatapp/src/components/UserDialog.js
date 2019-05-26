@@ -44,7 +44,7 @@ class UserDialog extends React.Component {
             />
           </DialogContent>
           <DialogActions>
-            <Button onClick={this.handleClose} color="primary">
+            <Button onClick={this.handleClose} color="#ffffff">
               Submit
             </Button>
           </DialogActions>

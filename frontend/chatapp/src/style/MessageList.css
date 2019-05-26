@@ -1,0 +1,17 @@
+.list-root {
+  height: calc(100vh - 180px);
+  top: 30px;
+  overflow-y: hidden;
+}
+.list-messages {
+  margin: auto !important;
+  height: 100%;
+  width: 50%;
+  overflow: scroll;
+  scrollbar-width: none;
+}
+.list-messages::-webkit-scrollbar {
+    display: none;
+}
+.list-listItem {
+}

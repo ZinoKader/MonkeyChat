@@ -17,10 +17,10 @@ class MessageBar extends React.Component {
   async handleSubmit(e) {
     axios.post('http://0.0.0.0:8990/api/messages/', {
     sender: this.props.getUsername(),
-    message: 'hey there!'
+    message: this.state.message,
     })
     .then(function (response) {
-      console.log(response);
+      
     })
     .catch(function (error) {
       console.log(error);
@@ -35,9 +35,9 @@ class MessageBar extends React.Component {
 
   render() {
     return (
-      <div className="root">
-        <form onSubmit={this.handleSubmit} className="container" noValidate autoComplete="off">
-          <TextField className="textfield"
+      <div className="bar-root">
+        <form onSubmit={this.handleSubmit} className="bar-container" noValidate autoComplete="off">
+          <TextField className="bar-textfield"
             value={this.state.message}
             onChange={this.handleChange}
             id="message-input"
@@ -46,9 +46,9 @@ class MessageBar extends React.Component {
             margin="normal"
             variant="filled"
           />
-          <Button type="submit" variant="contained" color="primary" className="button">
+          <Button type="submit" variant="contained" color="primary" className="bar-send-button">
             Send
-            <Icon className="sendIcon">send</Icon>
+            <Icon className="bar-sendIcon">send</Icon>
           </Button>
         </form>
       </div>

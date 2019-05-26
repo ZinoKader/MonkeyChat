@@ -1,23 +1,23 @@
-.root {
+.bar-root {
   position: fixed;
   bottom: 0;
   left: 0;
   right: 0;
   background-color: #ffffff;
 }
-.container {
+.bar-container {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
   justify-content: center;
   margin-bottom: 15px;
 }
-.textfield {
+.bar-textfield {
   min-width: 500px !important;
 }
-.button {
+.bar-send-button {
   margin: 15px !important;
 }
-.sendIcon {
+.bar-sendIcon {
   margin-left: 15px;
 }
